@@ -68,8 +68,6 @@ int main(int argc, char *argv[])
 
         bodyForce(collection, dspl[rank], sc[rank]); //ogni processo calcola la sua porzione
 
-        MPI_Barrier(MPI_COMM_WORLD); //aspetto che tutti terminano
-
         MPI_Gatherv(&collection[dspl[rank]], sc[rank], MPIbody, collection, sc, dspl, MPIbody, 0, MPI_COMM_WORLD); //il master raccoglie i risultati aggiornando l'array
     }
 
