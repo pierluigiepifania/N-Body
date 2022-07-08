@@ -12,6 +12,7 @@ Configurazione:
 
 Per la compilazione del sorgente utilizzare: 
 mpicc nbody.c -lm -std=c99 -o nbody 
+
 Per l'esecuzione: 
 mpirun -np numero_processi nbody numero_particelle 
   
